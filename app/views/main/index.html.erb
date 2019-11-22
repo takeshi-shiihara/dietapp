@@ -1,6 +1,8 @@
 <%= render "header" %>
 <div class="main">
   <img src="https://www.pakutaso.com/shared/img/thumb/Photoelly055_TP_V.jpg">
-  <div class="main-content">
-  </div>
+  <%= if user_signed_in? %>
+    <div class="main-content">
+    </div>
+  <% end %>
 </div>
