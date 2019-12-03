@@ -1,8 +1,12 @@
 <header>
   <%= link_to 'Meal manager', root_path, class: 'title' %>
+    <% if user_signed_in? %>
+      <div class="head-contents">
+        <%= link_to "記録する", new_food_path, class: 'food-post'%>
+      </div>
+    <% end %>
   <div class="header-right">
     <% if user_signed_in? %>
-      <div class="">
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to "ログイン", new_user_session_path %>

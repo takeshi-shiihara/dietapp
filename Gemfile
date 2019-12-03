@@ -63,3 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'chart-js-rails'
 gem 'gon'
+gem 'jquery-rails'
+gem 'chartkick'
+gem 'chartable'
+gem 'gretel'
