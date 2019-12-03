@@ -2,6 +2,11 @@ crumb :root do
   link "トップページ", root_path
 end
 
+crumb :food_post do
+  link "食事投稿", new_food_path
+  parent :root
+end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end
