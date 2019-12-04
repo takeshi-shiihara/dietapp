@@ -1,2 +1,23 @@
 <% breadcrumb :food_post %>
 <%= breadcrumbs separator: " &rsaquo; " %>
+<div class="main-content">
+  <%= form_for @foods do |f| %>
+    <div class="record">
+      <%= f.label :炭水化物 %>
+      <%= f.select :carbonhydrate, [100,110,120,130,140,150] %>
+    </div>
+
+    <div class="record">
+      <%= f.label :タンパク質 %>
+      <%= f.select :protein, [100,150,200] %>
+    </div>
+
+    <div class="record">
+      <%= f.label :脂質 %>
+      <%= f.select :lipid, [100,150,200] %>
+    </div>
+
+    <div class="form-submit">
+      <%= f.submit "記録する" %>
+    </div>
+  <% end %>

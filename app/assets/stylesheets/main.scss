@@ -33,6 +33,10 @@ header{
   }
 }
 
+.breadcrumbs{
+  background-color: rgb(240, 238, 238);
+  border-bottom: 1px solid;
+}
 
 .main {
   height: 800px;
@@ -43,8 +47,14 @@ header{
   background-size: cover;
   .main-content{
     .graph{
-      margin: 100px 0 0 100px;
-      width: 300px;
+      margin: 100px 0 0 10px;
+      width: 500px;
+      h1{
+        padding-left: 100px;
+      }
+      .blog-link{
+        padding-left: 100px;
+      }
     }
   }
   }

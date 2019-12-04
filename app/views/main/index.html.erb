@@ -2,8 +2,12 @@
   <% if user_signed_in? %>
     <div class="graph">
       <h1>あなたのPFCバランス</h1>
-      <%= pie_chart @data, width: "300px", height: "150px" %>
-      <%= link_to "PFCバランスとは？", "https://rariowa.com" %>
+      <%= pie_chart @data, width: "500px", height: "150px" %>
+      <%= link_to "PFCバランスとは？", "https://rariowa.com", class: 'blog-link' %>
+    </div>
+    <div class="weight-graph">
+      <h1>体重推移</h1>
+      <%= line_chart %>
     </div>
   <% else %>
     <div class="main-content">
