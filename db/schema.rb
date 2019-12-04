@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_11_25_025941) do
 
   create_table "weights", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
+    t.integer "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_weights_on_user_id"

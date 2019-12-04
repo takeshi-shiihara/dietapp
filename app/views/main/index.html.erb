@@ -7,7 +7,7 @@
     </div>
     <div class="weight-graph">
       <h1>体重推移</h1>
-      <%= line_chart %>
+      <%= line_chart @weight, width: "500px", height: "150px" %>
     </div>
   <% else %>
     <div class="main-content">
