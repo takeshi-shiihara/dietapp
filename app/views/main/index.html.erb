@@ -1,9 +1,11 @@
 <div class="main-content">
   <% if user_signed_in? %>
     <div class="graph">
-      <h1>あなたのPFCバランス</h1>
-      <%= pie_chart @data, width: "500px", height: "150px" %>
-      <%= link_to "PFCバランスとは？", "https://rariowa.com", class: 'blog-link' %>
+      <% if @data.present? %>
+        <h1>あなたのPFCバランス</h1>
+        <%= pie_chart @data, width: "500px", height: "150px" %>
+        <%= link_to "PFCバランスとは？", "https://rariowa.com", class: 'blog-link' %>
+      <% end %>
     </div>
     <div class="weight-graph">
       <h1>体重推移</h1>
