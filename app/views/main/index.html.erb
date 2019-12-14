@@ -1,15 +1,15 @@
 <div class="main-content">
   <% if user_signed_in? %>
     <div class="graph">
-      <% if @data.present? %>
+      <% if @fdata.present? %>
         <h1>あなたのPFCバランス</h1>
-        <%= pie_chart @data, width: "500px", height: "150px" %>
+        <%= pie_chart @fdata, width: "500px", height: "150px" %>
         <%= link_to "PFCバランスとは？", "https://rariowa.com", class: 'blog-link' %>
       <% end %>
     </div>
     <div class="weight-graph">
       <h1>体重推移</h1>
-      <%= line_chart @weight, width: "500px", height: "150px" %>
+      <%= line_chart @wdata, width: "500px", height: "150px" %>
     </div>
   <% else %>
     <div class="main-content">

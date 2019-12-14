@@ -3,10 +3,20 @@ class MainController < ApplicationController
 
   def index
     if user_signed_in?
-      if @user.foods.present?
-        @food = Food.find(current_user.id)
-        @data = [['炭水化物', @food.carbonhydrate], ['タンパク質', @food.protein], ['脂質', @food.lipid]]
-      else
+      if @user.foods.present? && @user.weights.present?
+        @foods = Food.where(user_id: current_user.id)
+        @weights = Weight.where(user_id: current_user.id)
+        total_carbonhydrate = 0
+        total_protein = 0
+        total_lipid = 0
+        @foods.each do |food|
+          total_carbonhydrate += food.carbonhydrate
+          total_protein += food.protein
+          total_lipid += food.lipid
+        end
+        @fdata = [['炭水化物', total_carbonhydrate], ['タンパク質', total_protein], ['脂質', total_lipid]]
+        @wdata = Weight.order('created_at ASC').group(:created_at).count
+      #   @wdata = [[@weights.created_at, @weights.weight]]
       end
     end
   end
@@ -16,5 +26,5 @@ class MainController < ApplicationController
   def set_user
     @user = User.find(current_user.id)
   end
-  
+
 end

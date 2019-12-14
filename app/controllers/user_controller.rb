@@ -2,8 +2,9 @@ class UserController < ApplicationController
 
   def show
     @user = User.find(current_user)
+    @food = @user.foods.all
   end
-  
+
   def edit
   end
 

@@ -7,6 +7,11 @@ crumb :food_post do
   parent :root
 end
 
+crumb :user_show do
+  link "マイページ", user_path
+  parent :root
+end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end
