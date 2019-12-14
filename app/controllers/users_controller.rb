@@ -1,7 +1,7 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
 
   def show
-    @user = User.find(current_user)
+    @user = User.find(current_user.id)
     @food = @user.foods.all
   end
 

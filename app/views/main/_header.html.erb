@@ -3,6 +3,7 @@
     <% if user_signed_in? %>
       <div class="head-contents">
         <%= link_to "記録する", new_food_path, class: 'food-post'%>
+        <%= link_to "マイページ", user_path(current_user.id), class: 'user_show'%>
       </div>
     <% end %>
   <div class="header-right">
