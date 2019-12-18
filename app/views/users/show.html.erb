@@ -1,4 +1,19 @@
 <% breadcrumb :user_show %>
 <%= breadcrumbs separator: " &rsaquo; " %>
 <div class="main-content">
+  <div class="eat-content">
+    <% @foods.each do |food| %>
+      <div class="eat-record">
+        <h1><%= food.created_at %></h1>
+        <div class="display">
+          <div class="carbon">炭水化物: <%= food.carbonhydrate %>g
+          </div>
+          <div class="protein">タンパク質: <%= food.protein %>g
+          </div>
+          <div class="lipid">脂質: <%= food.lipid %>g
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
