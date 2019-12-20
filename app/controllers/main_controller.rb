@@ -3,7 +3,7 @@ class MainController < ApplicationController
   def index
     if user_signed_in?
       @user = User.find(current_user.id)
-      if @user.foods.present? && @user.weights.present?
+      if @user.foods.present? 
         @foods = Food.where(user_id: current_user.id)
         @weights = Weight.where(user_id: current_user.id)
         total_carbonhydrate = 0

@@ -3,6 +3,10 @@
 <div class="main-contents">
   <%= form_for @foods do |f| %>
     <div class="content">
+      <div class="record-date">
+        <%= f.label @date %>
+        <%= f.date_select :date %>
+      </div>
       <div class="record">
         <%= f.label :炭水化物 %>
         <%= f.select :carbonhydrate, [100,110,120,130,140,150] %>
@@ -23,11 +27,11 @@
       </div>
     </div>
   <% end %>
-  <%= form_for @weights do |w| %>
-    <div class="content">
+  <%# <%= form_for @weights do |w| %>
+    <%# <div class="content"> %>
       <div class="record">
-        <%= w.label :体重 %>
-        <%= w.select :weight, [50,55,60,65,70,75,80] %>
+        <%# <%= w.label :体重 %>
+        <%# <%= w.select :weight, [50,55,60,65,70,75,80] %>
       </div>
-    </div>
-  <% end %>
+    <%# </div> %>
+  <%# <% end %>

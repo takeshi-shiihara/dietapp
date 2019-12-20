@@ -1,10 +1,11 @@
 class FoodsController < ApplicationController
   before_action :set_user
+  require 'date'
 
   def new
     if user_signed_in?
       @foods = Food.new
-      @weights = Weight.new
+      @date = Date.today
     else
       redirect_to root_path
     end
@@ -12,8 +13,9 @@ class FoodsController < ApplicationController
 
   def create
     @foods = Food.new(foods_params)
-    @weights = Weight.new(weights_params)
-    if @foods.save || @weights.save
+    @date = Date.today
+    # @weights = Weight.new(weights_params)
+    if @foods.save
       redirect_to root_path
     else
       redirect_to controller: :foods, action: :new
@@ -23,12 +25,12 @@ class FoodsController < ApplicationController
   private
 
   def foods_params
-    params.require(:food).permit(:carbonhydrate, :protein, :lipid).merge(user_id: current_user.id)
+    params.require(:food).permit(:carbonhydrate, :protein, :lipid, :date).merge(user_id: current_user.id)
   end
 
-  def weights_params
-    params.require(:weight).permit(:weight).merge(user_id: current_user.id)
-  end
+  # def weights_params
+  #   params.require(:weight).permit(:weight).merge(user_id: current_user.id)
+  # end
 
   def set_user
     @user = User.find(current_user.id)
