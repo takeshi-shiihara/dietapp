@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_11_25_025941) do
     t.integer "carbonhydrate"
     t.integer "protein"
     t.integer "lipid"
+    t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_foods_on_user_id"
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_11_25_025941) do
   create_table "weights", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.integer "weight"
+    t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_weights_on_user_id"

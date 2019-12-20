@@ -4,7 +4,7 @@
   <div class="eat-content">
     <% @foods.each do |food| %>
       <div class="eat-record">
-        <h1><%= food.created_at %></h1>
+        <h1><%= food.date %></h1>
         <div class="display">
           <div class="carbon">炭水化物: <%= food.carbonhydrate %>g
           </div>

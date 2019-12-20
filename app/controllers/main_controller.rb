@@ -1,8 +1,8 @@
 class MainController < ApplicationController
-  before_action :set_user
 
   def index
     if user_signed_in?
+      @user = User.find(current_user.id)
       if @user.foods.present? && @user.weights.present?
         @foods = Food.where(user_id: current_user.id)
         @weights = Weight.where(user_id: current_user.id)
@@ -19,12 +19,6 @@ class MainController < ApplicationController
       #   @wdata = [[@weights.created_at, @weights.weight]]
       end
     end
-  end
-
-  private
-
-  def set_user
-    @user = User.find(current_user.id)
   end
 
 end
