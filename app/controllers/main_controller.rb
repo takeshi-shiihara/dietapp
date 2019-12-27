@@ -5,7 +5,6 @@ class MainController < ApplicationController
       @user = User.find(current_user.id)
       if @user.foods.present? 
         @foods = Food.where(user_id: current_user.id)
-        @weights = Weight.where(user_id: current_user.id)
         total_carbonhydrate = 0
         total_protein = 0
         total_lipid = 0
@@ -15,8 +14,9 @@ class MainController < ApplicationController
           total_lipid += food.lipid
         end
         @fdata = [['炭水化物', total_carbonhydrate], ['タンパク質', total_protein], ['脂質', total_lipid]]
-        @wdata = Weight.order('created_at ASC').group(:created_at).count
-      #   @wdata = [[@weights.created_at, @weights.weight]]
+      end
+      if @user.weights.present?
+        @weights = Weight.where(user_id: current_user.id)
       end
     end
   end

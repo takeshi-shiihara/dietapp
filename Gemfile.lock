@@ -99,6 +99,8 @@ GEM
       request_store (>= 1.0)
     gretel (3.0.9)
       rails (>= 3.1.0)
+    groupdate (4.2.0)
+      activesupport (>= 5)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
@@ -235,6 +237,7 @@ DEPENDENCIES
   devise
   gon
   gretel
+  groupdate
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

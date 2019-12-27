@@ -9,7 +9,8 @@
     </div>
     <div class="weight-graph">
       <h1>体重推移</h1>
-      <%= line_chart @wdata, width: "500px", height: "150px" %>
+      <%= line_chart @weights.each do |weight|
+        {}, width: "500px", height: "150px" %>
     </div>
   <% else %>
     <div class="main-content">
