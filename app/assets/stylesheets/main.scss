@@ -5,6 +5,12 @@ a{
   text-decoration: none;
 }
 
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
 
 header{
   height: 60px;
@@ -14,13 +20,24 @@ header{
   position: fixed;
   z-index: 3000;
   .title{
+    float: left;
     font-size: 35px;
-    padding-left: 10px;
+    width: 250px;
   }
   .head-contents{
     display: inline-block;
-    text-align: center;
-    margin-left: 200px;
+    margin-left: 150px;
+    height: 60px;
+    li {
+      display: inline-block;
+      height: 60px;
+      .post{
+        margin: 10px;
+        .posts{
+          display: none;
+        }
+      }
+    }
   }
   .header-right{
     float: right;
