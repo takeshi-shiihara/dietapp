@@ -11,6 +11,10 @@ a{
   clear: both;
 }
 
+li:hover {
+  background: #8f8e8e60;
+}
+
 
 header{
   height: 60px;
@@ -30,12 +34,12 @@ header{
     height: 60px;
     li {
       display: inline-block;
-      height: 60px;
-      .post{
-        margin: 10px;
-        .posts{
-          display: none;
-        }
+      height: 59px;
+      margin-left: 10px;
+      line-height: 59px;
+      padding: 0 10px 0 10px;
+      span {
+        margin-top: 20px;
       }
     }
   }

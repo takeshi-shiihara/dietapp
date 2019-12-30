@@ -5,12 +5,12 @@
     <% if user_signed_in? %>
       <ul class="head-contents">
         <li>
-          <%= link_to "記録する", new_food_path, class: 'post'%>
+          <span>記録する</span>
           <i class="fas fa-angle-down"></i>
         </li>
-          <aside class="posts">
-            <%= link_to '食べ物', new_food_path %>
-          </aside>
+        <%# <div class="posts">
+          <%= link_to '食べ物', new_food_path %>
+        <%# </div>  %>
         <li>
           <%= link_to "マイページ", user_path(current_user.id), class: 'user_show'%>
         </li>
