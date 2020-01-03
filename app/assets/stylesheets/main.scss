@@ -11,7 +11,7 @@ a{
   clear: both;
 }
 
-li:hover {
+.post:hover {
   background: #8f8e8e60;
 }
 
@@ -22,6 +22,7 @@ header{
   border-bottom: 1px solid;
   background: #fff;
   position: fixed;
+  display: flex;
   z-index: 3000;
   .title{
     float: left;
@@ -29,18 +30,22 @@ header{
     width: 250px;
   }
   .head-contents{
-    display: inline-block;
+    display: flex;
     margin-left: 150px;
     height: 60px;
-    li {
+    span {
       display: inline-block;
       height: 59px;
-      margin-left: 10px;
       line-height: 59px;
-      padding: 0 10px 0 10px;
-      span {
-        margin-top: 20px;
+      padding: 0 15px 0 15px;
+    }
+    .post {
+      margin-left: 10px;
+      p {
       }
+    }
+    span {
+      display: inline-block;
     }
   }
   .header-right{

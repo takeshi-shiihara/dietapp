@@ -3,17 +3,17 @@
     <%= link_to 'Meal manager', root_path %>
   </div>
     <% if user_signed_in? %>
-      <ul class="head-contents">
-        <li>
+      <div class="head-contents">
+        <span class="post">
           <span>記録する</span>
           <i class="fas fa-angle-down"></i>
-        </li>
-        <%# <div class="posts">
-          <%= link_to '食べ物', new_food_path %>
-        <%# </div>  %>
-        <li>
+            <%# <ul class="dropdwn">
+              <li><%= link_to "食べ物", new_food_path %></li>
+            <%# </ul> %>
+        </span>
+        <span>
           <%= link_to "マイページ", user_path(current_user.id), class: 'user_show'%>
-        </li>
+        </span>
       </ul>
     <% end %>
   <div class="header-right">
