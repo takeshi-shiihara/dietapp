@@ -12,7 +12,12 @@ a{
 }
 
 .post:hover {
+  background: #29292960;
+}
+
+.dropdwn{
   background: #8f8e8e60;
+  padding: 0 15px;
 }
 
 
@@ -25,27 +30,36 @@ header{
   display: flex;
   z-index: 3000;
   .title{
-    float: left;
     font-size: 35px;
     width: 250px;
+    height: 59px;
   }
   .head-contents{
     display: flex;
     margin-left: 150px;
     height: 60px;
+    .post {
+      margin-left: 10px;
+    }
     span {
-      display: inline-block;
+      border-left: 2px solid;
       height: 59px;
       line-height: 59px;
       padding: 0 15px 0 15px;
+      max-width: 112px;
     }
     .post {
       margin-left: 10px;
-      p {
+      .dropdwn{
+        margin: 0 -17px;
+        background: #29292960;
+        li{
+          display: list-item;
+        }
       }
     }
-    span {
-      display: inline-block;
+    .user-show{
+      border-right: 2px solid;
     }
   }
   .header-right{
@@ -54,6 +68,7 @@ header{
     height: 60px;
     width: 200px;
     a{
+      line-height: 59px;
       font-size: 15px;
       margin-left: 20px;
     }
