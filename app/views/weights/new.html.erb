@@ -2,6 +2,10 @@
 <%= breadcrumbs separator: " &rsaquo; " %>
 <div class="main-contents">
   <%= form_for @weight do |w| %>
-    
+    <div class="content">
+      <div class="record-date">
+        <%= w.label @date %>
+      </div>
+    </div>
   <% end %>
 </div>
