@@ -89,6 +89,9 @@ header{
 .breadcrumbs{
   background-color: rgb(240, 238, 238);
   border-bottom: 1px solid;
+  position: fixed;
+  z-index: 300;
+  width: 100%;
 }
 
 .main {
