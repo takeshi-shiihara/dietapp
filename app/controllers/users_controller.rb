@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user
 
   def show
-    @foods = @user.foods.all
+    @foods = @user.foods.all.page(params[:page]).per(10).order('date DESC')
   end
 
   def edit

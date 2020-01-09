@@ -8,8 +8,9 @@
           <font>記録する</font>
           <i class="fas fa-angle-down"></i>
             <%# <ul class="dropdwn">
-              <li><%= link_to "食べ物", new_food_path %></li>
-            <%# </ul> %>
+              <li><a href="/foods/new">食べ物を記録する</a></li>
+              <li class="weight"><a href="">体重を記録する</a></li>
+            </ul> %>
         </span>
         <span class="user-show">
           <%= link_to "マイページ", user_path(current_user.id), class: 'user-show-link'%>

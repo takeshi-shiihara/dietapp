@@ -20,6 +20,10 @@ a{
   padding: 0 15px;
 }
 
+.record-link:hover {
+  color: lightskyblue;
+}
+
 
 header{
   height: 60px;
@@ -51,10 +55,17 @@ header{
     .post {
       margin-left: 10px;
       .dropdwn{
+        width: 200px;
         margin: 0 -17px;
         background: #29292960;
         li{
+          width: 202px;
           display: list-item;
+          margin: 0 -17px;
+          border-bottom: 1px solid #fff;
+          a {
+            margin-left: 17px;
+          }
         }
       }
     }
