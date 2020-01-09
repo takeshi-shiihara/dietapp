@@ -12,6 +12,11 @@ crumb :user_show do
   parent :root
 end
 
+crumb :weight_post do
+  link "体重投稿", new_weight_path
+  parent :root
+end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end
