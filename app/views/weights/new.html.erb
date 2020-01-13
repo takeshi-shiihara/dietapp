@@ -5,10 +5,14 @@
     <div class="content">
       <div class="record-date">
         <%= w.label @date %>
+        <%= w.date_select :date %>
       </div>
       <div class="record">
         <%= w.label :体重（kg） %>
         <%= w.number_field :weight %>
+      </div>
+      <div class="for-submit">
+        <%= w.submit "送信" %>
       </div>
     </div>
   <% end %>

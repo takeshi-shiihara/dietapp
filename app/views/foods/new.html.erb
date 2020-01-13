@@ -5,6 +5,7 @@
     <div class="content">
       <div class="record-date">
         <%= f.label @date %>
+        <%= f.date_select :date %>
       </div>
       <div class="record">
         <%= f.label :炭水化物 %>
@@ -22,7 +23,7 @@
       </div>
 
       <div class="form-submit">
-        <%= f.submit "記録する" %>
+        <%= f.submit "送信" %>
       </div>
     </div>
   <% end %>
