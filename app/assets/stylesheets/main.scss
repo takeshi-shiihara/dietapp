@@ -95,7 +95,7 @@ header{
 }
 
 .main {
-  height: 800px;
+  height: 100%;
   width: 100%;
   padding-top: 60px;
   overflow: hidden;
@@ -112,5 +112,15 @@ header{
         padding-left: 100px;
       }
     }
+    .weight-graph{
+      margin-top: 20px;
+      h1{
+        margin-left: 110px;
+      }
+      #myChart{
+        position: relative;
+        height: 500px;
+      }
+    }
   }
-  }
+}

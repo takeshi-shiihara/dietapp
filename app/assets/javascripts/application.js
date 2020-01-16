@@ -11,9 +11,11 @@
 // about supported directives.
 //
 
+//= require rails-ujs
 //= require jquery
 //= require jquery_ujs
 //= require activestorage
 //= require_tree .
+//= require Chart.min
 //= require chartkick
 //= require Chart.bundle
