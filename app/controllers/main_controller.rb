@@ -17,6 +17,9 @@ class MainController < ApplicationController
       end
       if @user.weights.present?
         @weights = Weight.where(user_id: current_user.id)
+        respond_to do |format|
+          format.json
+        end
       end
     end
   end
