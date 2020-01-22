@@ -9,11 +9,11 @@
     </div>
     <div class="weight-graph">
       <h1>体重推移</h1>
-      <div class="chart-container" style="position: relative; height:150px; width:300px">
+      <%# <div class="chart-container" style="position: relative; height:150px; width:300px">
         <canvas  id="myChart"></canvas>
       </div>
-      <script>draw_graph();</script>
-      <%# <%= line_chart @weights, width: "500px", height: "150px" %>
+      <script>draw_graph();</script> %>
+      <%= line_chart Weight.pluck(:date, :weight), width: "500px", height: "200px" %>
     </div>
   <% else %>
     <div class="main-content">
