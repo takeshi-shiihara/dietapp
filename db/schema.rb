@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2019_11_25_025941) do
 
   create_table "foods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
+    t.text "food", null: false
     t.integer "carbonhydrate"
     t.integer "protein"
     t.integer "lipid"
