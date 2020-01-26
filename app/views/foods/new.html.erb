@@ -2,29 +2,39 @@
 <%= breadcrumbs separator: " &rsaquo; " %>
 <div class="main-contents">
   <%= form_for @foods do |f| %>
-    <div class="content">
-      <div class="record-date">
-        <%= f.label @date %>
-        <%= f.date_select :date %>
-      </div>
-      <div class="record">
-        <%= f.label :炭水化物 %>
-        <%= f.select :carbonhydrate, [100,110,120,130,140,150] %>
-      </div>
+    <div class="contents">
+      <div class="content">
+        <div class="nutrition">
+          <div class="record-date">
+            <%= f.label @date %>
+            <%= f.date_select :date %>
+          </div>
+          <div class="record">
+            <%= f.number_field :carbonhydrate, min: 0 %>
+          </div>
 
-      <div class="record">
-        <%= f.label :タンパク質 %>
-        <%= f.select :protein, [100,150,200] %>
-      </div>
+          <div class="record">
+            <%= f.label :タンパク質 %><br>
+            <%= f.number_field :protein, min: 0 %>
+          </div>
 
-      <div class="record">
-        <%= f.label :脂質 %>
-        <%= f.select :lipid, [100,150,200] %>
+          <div class="record">
+            <%= f.label :脂質 %><br>
+            <%= f.number_field :lipid, min: 0 %>
+          </div>
+        </div>
       </div>
-
-      <div class="form-submit">
-        <%= f.submit "送信" %>
+      <div class="content">
+        <span class="food-content">
+          <div class="text">
+            <%= f.label :食品 %><br>
+            <%= f.text_area :food %>
+          </div>
+        </span>
       </div>
+    </div>
+    <div class="form-submit">
+      <%= f.submit "送信" %>
     </div>
   <% end %>
   <%# <%= form_for @weights do |w| %>
