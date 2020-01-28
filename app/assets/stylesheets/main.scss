@@ -66,53 +66,77 @@ header{
     }
   }
   .head-contents{
-    display: flex;
     @include pc {
       margin-left: 150px;
       height: 60px;
       }
-    span {
-      padding: 0 15px 0 15px;
-      line-height: 59px;
-      width: 113px;
-      @include pc {
-        border-left: 2px solid;
+    .contents-h {
+      display: flex;
+      span {
+        line-height: 59px;
+        width: 113px;
+        @include pc {
+          height: 59px;
+          border-left: 2px solid;
+          padding: 0 15px 0 15px;
+        }
+        @include tab {
+          height: 60px;
+          text-align: center;
+        }
       }
-    }
-    .post {
-      margin-left: 10px;
-      .dropdwn{
-        width: 200px;
-        margin: 0 -17px;
-        background: #29292960;
-        li{
+      .post {
+        margin-left: 10px;
+        .dropdwn{
+          width: 200px;
+          background: #29292960;
           @include pc {
-            width: 202px;
-            display: list-item;
             margin: 0 -17px;
-            border-bottom: 1px solid #fff;
           }
-          a {
-            margin-left: 17px;
+          @include tab {
+            padding: 0;
+          }
+          li{
+            display: list-item;
+            border-bottom: 1px solid #fff;
+            @include pc {
+              width: 202px;
+              margin: 0 -17px;
+            }
+            a {
+              height: 100%;
+              width: 100%;
+              @include pc {
+                margin-left: 17px;
+              }
+            }
           }
         }
       }
-    }
-    .user-show{
-      @include pc {
-        border-right: 2px solid;
+      .user-show{
+        @include pc {
+          border-right: 2px solid;
+        }
+      }
+      .header-right{
+        margin-right: 30px;
+        height: 60px;
+        width: 200px;
+        a{
+          line-height: 59px;
+          font-size: 15px;
+          margin-left: 20px;
+        }
       }
     }
   }
-  .header-right{
-    display: inline-block;
-    margin-right: 30px;
-    height: 60px;
-    width: 200px;
-    a{
-      line-height: 59px;
-      font-size: 15px;
-      margin-left: 20px;
+  .right-content {
+    @include pc {
+      margin-left: 700px;
+    }
+    @include tab {
+      text-align: center;
+      line-height: 60px;
     }
   }
 }
@@ -120,18 +144,22 @@ header{
 .breadcrumbs{
   background-color: rgb(240, 238, 238);
   border-bottom: 1px solid;
-  position: fixed;
   z-index: 300;
   width: 100%;
+  @include pc {
+    position: fixed;
+  }
 }
 
 .main {
   height: 900px;
   width: 100%;
-  padding-top: 60px;
   overflow: hidden;
-  background-image: url("/images/fruite.jpg");
-  background-size: cover;
+  @include pc{
+    padding-top: 60px;
+    background-image: url("/images/fruite.jpg");
+    background-size: cover;
+  }
   .main-content{
     .graph{
       margin: 100px 0 0 10px;

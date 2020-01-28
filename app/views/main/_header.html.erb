@@ -2,8 +2,9 @@
   <div class="title">
     <%= link_to 'Meal manager', root_path %>
   </div>
-    <% if user_signed_in? %>
-      <div class="head-contents">
+  <% if user_signed_in? %>
+    <div class="head-contents">
+      <div class="contents-h">
         <span class="post">
           <font>記録する</font>
           <i class="fas fa-angle-down"></i>
@@ -15,16 +16,17 @@
         <span class="user-show">
           <%= link_to "マイページ", user_path(current_user.id), class: 'user-show-link'%>
         </span>
+        <div class="header-right">
+          <div>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout'%>
+          </div>
+        </div>
       </div>
-    <% end %>
-  <div class="header-right">
-    <% if user_signed_in? %>
-      <span>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout'%>
-      </span>
-    <% else %>
+    </div>
+  <% else %>
+    <div class="right-content">
       <%= link_to "ログイン", new_user_session_path %>
       <%= link_to "新規登録", new_user_registration_path %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </header>
