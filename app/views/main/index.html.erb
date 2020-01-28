@@ -3,7 +3,7 @@
     <div class="graph">
       <% if @fdata.present? %>
         <h1>あなたのPFCバランス</h1>
-        <%= pie_chart @fdata, width: "500px", height: "150px" %>
+        <%= pie_chart @fdata, height: "150px" %>
         <%= link_to "PFCバランスとは？", "https://rariowa.com", class: 'blog-link' %>
       <% end %>
     </div>
@@ -13,7 +13,7 @@
         <canvas  id="myChart"></canvas>
       </div>
       <script>draw_graph();</script> %>
-      <%= line_chart Weight.pluck(:date, :weight), width: "500px", height: "200px" %>
+      <%= line_chart Weight.pluck(:date, :weight), height: "200px" %>
     </div>
   <% else %>
     <div class="main-content">
