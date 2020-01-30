@@ -45,8 +45,9 @@
       }
       .food-content {
         .text {
-          textarea {
+          #textarea {
             max-height: 200px;
+            line-height: 20px;
           }
         }
       }
