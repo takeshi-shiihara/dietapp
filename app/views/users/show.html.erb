@@ -4,13 +4,16 @@
   <div class="eat-content">
     <% @foods.each do |food| %>
       <div class="eat-record">
-        <h1><%= food.date %></h1>
+        <h2><%= food.date %></h2>
         <div class="display">
-          <div class="carbon">炭水化物: <%= food.carbonhydrate %>g
+          <div class="nutrients">
+            <div class="carbon">炭水化物: <%= food.carbonhydrate %>g</div>
+            <div class="protein">タンパク質: <%= food.protein %>g</div>
+            <div class="lipid">脂質: <%= food.lipid %>g</div>
           </div>
-          <div class="protein">タンパク質: <%= food.protein %>g
-          </div>
-          <div class="lipid">脂質: <%= food.lipid %>g
+          <div class="food-menu">
+            <label>食べた物</label>
+            <div class="ate"><%= food.food %></div>
           </div>
         </div>
       </div>

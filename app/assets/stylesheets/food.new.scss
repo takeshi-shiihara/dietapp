@@ -1,7 +1,9 @@
 
 
 .main-contents{
-  margin: 60px 0 0 60px;
+  @include pc {
+    margin: 60px 0 0 60px;
+  }
   .contents{
     display: inline-flex;
     .content{
@@ -31,7 +33,7 @@
     }
     .content:nth-child(2) {
       margin-left: 50px;
-      .fooc-content {
+      .food-content {
         .text {
         }
       }

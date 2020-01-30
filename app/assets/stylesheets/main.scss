@@ -147,12 +147,12 @@ header{
 }
 
 .main {
-  height: 100vh;
+  height: 900px;
   width: 100%;
-  overflow: hidden;
   @include pc{
     padding-top: 60px;
     background-image: url("/images/fruite.jpg");
+    overflow: hidden;
     background-size: cover;
   }
   .main-content{
@@ -186,26 +186,3 @@ header{
     }
   }
 }
-
-
-
-
-// @include tab {
-//   header {
-//     height: 100px;
-//     border-bottom: 1px solid;
-//     font-size: 50px;
-//     .tittle {
-//       height: 99px;
-//     }
-//     .header-contents {
-//       display: none;
-//       .post {
-//         display: none;
-//       }
-//       .user-show {
-//         display: none;
-//       }
-//     }
-//   }
-// }

@@ -14,7 +14,6 @@ class FoodsController < ApplicationController
   def create
     @foods = Food.new(foods_params)
     @date = Date.today
-    # @weights = Weight.new(weights_params)
     if @foods.save
       redirect_to root_path
     else
@@ -27,10 +26,6 @@ class FoodsController < ApplicationController
   def foods_params
     params.require(:food).permit(:food, :carbonhydrate, :protein, :lipid, :date).merge(user_id: current_user.id)
   end
-
-  # def weights_params
-  #   params.require(:weight).permit(:weight).merge(user_id: current_user.id)
-  # end
 
   def set_user
     @user = User.find(current_user.id)
