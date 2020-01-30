@@ -1,3 +1,11 @@
 .regist {
   margin: 0 10px;
+  @include tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .regist-contents {
+    
+  }
 }
