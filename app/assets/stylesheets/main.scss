@@ -130,12 +130,12 @@ header{
     }
   }
   .right-content {
+    line-height: 60px;
     @include pc {
       margin-left: 700px;
     }
     @include tab {
       text-align: center;
-      line-height: 60px;
     }
   }
 }
