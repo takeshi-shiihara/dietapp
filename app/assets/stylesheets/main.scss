@@ -147,9 +147,9 @@ header{
 }
 
 .main {
-  height: 900px;
   width: 100%;
   @include pc{
+    height: 900px;
     padding-top: 60px;
     background-image: url("/images/fruite.jpg");
     overflow: hidden;
