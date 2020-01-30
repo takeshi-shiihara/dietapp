@@ -2,18 +2,22 @@
 <%= breadcrumbs separator: " &rsaquo; " %>
 <div class="main-contents">
   <%= form_for @weight do |w| %>
-    <div class="content">
-      <div class="record-date">
-        <%= w.label @date %>
-        <%= w.date_select :date %>
+    <div class="contents">
+      <div class="content">
+        <div class="nutrition">
+          <div class="record-date">
+            <%= w.label @date %>
+            <%= w.date_select :date %>
+          </div>
+          <div class="record">
+            <%= w.label :体重（kg） %><br>
+            <%= w.number_field :weight %>
+          </div>
+        </div>
       </div>
-      <div class="record">
-        <%= w.label :体重（kg） %>
-        <%= w.number_field :weight %>
-      </div>
-      <div class="for-submit">
-        <%= w.submit "送信" %>
-      </div>
+    </div>
+    <div class="actions">
+      <%= w.submit "送信" %>
     </div>
   <% end %>
 </div>
