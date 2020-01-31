@@ -43,11 +43,12 @@
       @include tab {
         margin-top: 10px;
       }
-      .food-content {
+      .nutrition {
         .text {
           #textarea {
-            max-height: 200px;
             line-height: 20px;
+            padding: 8px;
+            max-height: 138px;
           }
         }
       }
