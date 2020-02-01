@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: dietapp_production
   username: dietapp
   password: <%= ENV['DIETAPP_DATABASE_PASSWORD'] %>
