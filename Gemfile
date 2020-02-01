@@ -69,3 +69,4 @@ gem 'chartable'
 gem 'gretel'
 gem 'groupdate'
 gem 'kaminari'
+
