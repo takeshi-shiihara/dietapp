@@ -3,9 +3,9 @@ class CreateFoods < ActiveRecord::Migration[5.2]
     create_table :foods do |t|
       t.references :user,          null: false, foreign_key: true
       t.text    :food,             null: false
-      t.integer :carbonhydrate
-      t.integer :protein
-      t.integer :lipid
+      t.integer :carbonhydrate,     null: false
+      t.integer :protein,           null: false
+      t.integer :lipid,             null: false
       t.date    :date
       t.timestamps
     end
